@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <title>Thirukural API</title>
+    <style>
+      img {
+        width: 75px;
+        height: 75px;
+      }
+
+      .description p:nth-child(2) {
+        font-size: 16px;
+      }
+
+      .whole {
+        background: url('./photo-1519751138087-5bf79df62d5b.jfif') no-repeat
+          center center/cover;
+        height: 550px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="col-8 offset-2 mt-5 mr-2 whole">
+        <!-- Image -->
+        <div>
+          <img
+            src="https://a10.gaanacdn.com/images/playlists/75/53058375/crop_480x480_1614689887_53058375.jpg"
+            alt="IMG"
+            class="rounded float-left mr-3 img-responsive clearfix"
+          />
+        </div>
+
+        <nav aria-label="Page navigation example" class="float-right">
+          <ul class="pagination">
+            <li class="page-item">
+              <button
+                class="btn btn-outline-dark active"
+                id="tamil"
+                type="button"
+                onclick="changeTamil()"
+              >
+                TAMIL
+              </button>
+            </li>
+            <li class="page-item">
+              <button
+                class="btn btn-outline-dark"
+                type="button"
+                id="english"
+                onclick="changeEnglish()"
+              >
+                ENGLISH
+              </button>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Heading -->
+        <div><p class="h2 w-50">THIRUKURAL FINDER</p></div>
+
+        <div class="clearfix">
+          <div class="input-group w-25 float-right mb-4">
+            <input
+              type="text"
+              class="form-control"
+              id="number"
+              placeholder="Kural number"
+              aria-label="Kural number"
+              aria-describedby="button-addon2"
+            />
+            <div class="input-group-append">
+              <button
+                class="btn btn-outline-dark active search-button"
+                type="button"
+                id="button-addon2"
+              >
+                <i class="fas fa-search"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- main content -->
+        <div>
+          <div>
+            <p class="kural-no mt-3 d-flex"></p>
+            <p class="section"></p>
+            <p class="chapter"></p>
+            <p
+              class="
+                kural
+                h4
+                d-flex
+                mt-4
+                border border-dark
+                rounded
+                p-2
+                font-weight-bold
+              "
+            ></p>
+            <p class="description mt-5 d-flex"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
